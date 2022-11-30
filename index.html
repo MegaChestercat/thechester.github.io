@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home | The_Chester</title>
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="shortcut icon" href="src/icon.png">
+    <script src="https://kit.fontawesome.com/60f5880bc7.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div id="header">
+        <div class="container">
+            <nav>
+                <a href="index.html"><img src="src/logo.png" class="logo"></a>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="portfolio.html">Portfolio</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="https://github.com/MegaChestercat"><i class="fa-brands fa-github"></i></a></li>
+                    <li><a href="https://twitter.com/MegaChestercat"><i class="fa-brands fa-twitter"></i></a></li>
+                    <li><a href="https://www.linkedin.com/in/thechester/"><i class="fa-brands fa-linkedin-in"></i></a></li>
+                </ul>
+            </nav>
+            <div class="header-text">
+                <h1>The_Chester</h1>
+                <h2>Developer</h2>
+            </div>
+        </div>
+    </div>
+    <!-----------about---------------------->
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col1">
+                    <h1 class="sub-title">About Me</h1>
+                    <p>Hi everybody, my name is Mario Sánchez, and I am a 20 year old mexican developer that wants to change the world with revolutional ideas.
+                        <br>The programming languages that I primarily work are C, Java, JavaScript, Python, Kotlin, and Flutter. 
+                        <br> My past and present projects can be found on my <a href="portfolio.html">portfolio</a> or my <a href="https://github.com/MegaChestercat">Github profile</a>.</p>
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                        <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                        <p class="tab-links" onclick="opentab('education')">Education</p>
+                    </div>
+                    <div class="tab-contents active-tab" id="skills">
+                        <ul>
+                            <li><span>UI/UX</span><br>Designing Web/App Interfaces<br>Designing User Experiences</li>
+                            <li><span>Web/App Development</span><br>Developing Web/App Applications</li>
+                            <li><span>Languages</span><br>English - Advanced<br>Spanish - Native</li>
+                            <li><span>Soft Skills</span><br>Teamwork | Problem Solving | Responsibility | Leadership | Adaptability<br>Creativity | Time-management | Research</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="experience">
+                        <ul>
+                            <li><span>Hyunjin Bot (May 2022 - Nov 2022)</span><br>JavaScript application that provide moderation and entertainment on Discord Servers.</li>
+                            <li><span>Elemental Metals Mod (May 2021 - Present)</span><br>Java module of materials for a videogame with different real world physical properties emulating the periodic 
+                                table to raise <br>awareness about science</li>
+                            <li><span>Lyght (Dec 2019 - Present)</span><br>Free Kotlin blogging and messaging tool</li>
+                            <li><span>Dogz (Jan 2019 - Apr 2019)</span><br>Developed Java application about pets with news, caring advice and adoption awareness.</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="education">
+                        <ul>
+                            <li><span>Universidad de las Américas Puebla | Cholula, Mexico</span><br><b>Aug 2020 - May 2024</b><br>Bachelor in Computer Systems Engineering – Term 6<br><b>Cumulative GPA:</b> 3.95</li>
+
+                        </ul>
+                    </div>
+                </div>
+                <div class="about-col2">
+                    <img src="src/user.jpeg" alt="">
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!-----------featured projects---------------------->
+    <div id="projects">
+        <div class="container">
+            <h1 class="sub-title title2">Featured Projects</h1>
+            <div class="work-list">
+                <div class="work">
+                    <img src="src/work-1.png">
+                    <div class="layer">
+                        <h3><b>Lyght</b></h3>
+                        <p>Kotlin messaging and blogging tool.</p>
+                    </div>
+                </div>
+                <div class="work">
+                    <img src="src/work-2.png">
+                    <div class="layer">
+                        <h3><b>Hyunjin Bot</b></h3>
+                        <p>Open Source JavaScript moderation and entertainment Discord bot.</p>
+                        <a href="https://github.com/MegaChestercat/Hyunjin-Bot"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                    </div>
+                </div>
+                <div class="work">
+                    <img src="src/work-3.png">
+                    <div class="layer">
+                        <h3><b>Dogz</b></h3>
+                        <p>Java application for dogs news, care and adoption.</p>
+                        <a href="https://www.amazon.com/-/es/dp/B07QHWK95M/ref=sr_1_6?__mk_es_US=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=1JTJC6BPGQYVJ&keywords=Dogz&qid=1669842070&sprefix=dogz%2Caps%2C293&sr=8-6"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                    </div>
+                </div>
+            </div>
+            <a href="portfolio.html" class="btn">See more</a>
+        </div>
+    </div>
+
+    <div id="copyright">
+        <div class="container">
+            <p>© 2022 The_Chester.</p>
+        </div>
+    </div>
+
+    <script>
+        var tablinks = document.getElementsByClassName("tab-links");
+        var tabcontents = document.getElementsByClassName("tab-contents");
+        function opentab(tabname){
+            for(tablink of tablinks){
+                tablink.classList.remove("active-link");
+            }
+            for(tabcontent of tabcontents){
+                tabcontent.classList.remove("active-tab");
+            }
+            event.currentTarget.classList.add("active-link");
+            document.getElementById(tabname).classList.add("active-tab");
+        }
+    </script>
+</body>
+</html>
